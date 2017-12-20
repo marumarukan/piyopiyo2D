@@ -15,9 +15,9 @@ public class playerscript : MonoBehaviour {
 		if (Input.GetKeyDown ("space")) {
 			jump = true;
 		}
-		if (Input.GetKeyDown ("right")) {
+		/*if (Input.GetKeyDown ("right")) {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (3, 0);
-		}
+		}*/
 	}
 	void FixedUpdate(){
 		if (jump) {

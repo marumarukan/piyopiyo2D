@@ -19,6 +19,12 @@ public class wallsprict : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+		/*if (!GetComponent<Renderer>().isVisible) {
+			Destroy(this.gameObject);
+		}*/
+
+		
 		/*if (nextSpwnTime < Time.timeSinceLevelLoad) {
 			nextSpwnTime = Time.timeSinceLevelLoad + interval;
 			LocalInstantate ();
@@ -37,9 +43,17 @@ public class wallsprict : MonoBehaviour {
 //
 //	}
 	void OnTriggerEnter2D(Collider2D collison2D){
+		
 		if (collison2D.gameObject.tag == "Player") {
-			Instantiate (wallPrefab, this.gameObject.transform.position += new Vector3 (7, 0, 0), Quaternion.identity);
+			float y = Random.Range (2f, -2f);
+			Debug.Log (y);
+			Instantiate (wallPrefab, new Vector3 (this.gameObject.transform.position.x + 12, y, 0), Quaternion.identity);
 			Destroy (this.gameObject);
+			Invoke ("destroy", 3f);
 		}
 	}
+void  destroy(){
+		Destroy (wallPrefab);
+}
+
 }
