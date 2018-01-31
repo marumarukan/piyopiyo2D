@@ -45,14 +45,13 @@ public class wallsprict : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collison2D){
 		
 		if (collison2D.gameObject.tag == "Player") {
-			float y = Random.Range (2f, -2f);
-			Debug.Log (y);
+			float y = Random.Range (1f, -1f);
+			
 			Instantiate (wallPrefab, new Vector3 (this.gameObject.transform.position.x + 12, y, 0), Quaternion.identity);
-			Destroy (this.gameObject);
-			Invoke ("destroy", 3f);
+			Invoke ("destoroy", 3.0f);
 		}
 	}
-void  destroy(){
+void destoroy(){
 		Destroy (wallPrefab);
 }
 

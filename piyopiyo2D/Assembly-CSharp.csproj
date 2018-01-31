@@ -52,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\playerscript.cs" />
+     <Compile Include="Assets\rope2script.cs" />
+     <Compile Include="Assets\ropescript.cs" />
+     <Compile Include="Assets\walldestroyscript.cs" />
      <Compile Include="Assets\wallmovesprict.cs" />
      <Compile Include="Assets\wallsprict.cs" />
  <Reference Include="UnityEngine.UI">

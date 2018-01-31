@@ -156,6 +156,10 @@
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
 'Assets/playerscript.cs'
+'Assets/rope2script.cs'
+'Assets/ropescript.cs'
+'Assets/walldestroyscript.cs'
+'Assets/wallmovesprict.cs'
 'Assets/wallsprict.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'
