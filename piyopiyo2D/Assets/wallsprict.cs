@@ -49,7 +49,7 @@ public class wallsprict : MonoBehaviour {
 			
 			Instantiate (wallPrefab, new Vector3 (this.gameObject.transform.position.x + 10.4f, y, 0), Quaternion.identity);
 			Destroy (this.gameObject);
-			Invoke ("destoroy", 3.0f);
+		Invoke ("destoroy", 3.0f);
 		}
 	}
 void destoroy(){
