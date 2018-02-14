@@ -5,9 +5,9 @@ using UnityEngine;
 public class playerscript : MonoBehaviour {
 	public bool jump;
 	public float power = 2f;
-	public float speed = 1f;
-	public float width = 2f;
-	public float height = 2f;
+	public float speed = 3f;
+	public float width = 4f;
+	public float height = 4f;
 	//float watch=0f;
 
 	float x,y,now;
@@ -32,13 +32,13 @@ public class playerscript : MonoBehaviour {
 
 			x = Mathf.Cos (now * speed) * width;
 			y = Mathf.Sin (now * speed) * height;
-			transform.position = new Vector2 (x, y);
-
+			//transform.position = new Vector2 (x, y);
+			GetComponent<Rigidbody2D>().velocity=new Vector2(x,y);
 			//jump = true;
 		}
 		if (Input.GetKeyUp ("space")) {
 
-			now = 0;
+			now = 2.7f;
 		}
 	}
 	void FixedUpdate(){
