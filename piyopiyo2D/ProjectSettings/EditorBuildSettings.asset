@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/scene/gamestart.unity
+    guid: 398ebb38834824f2480833385d5c4f64
+  - enabled: 1
+    path: Assets/scene/piyopiyo2D.unity
+    guid: fb4168d7ab4554a049d4383f05ece844
+  - enabled: 1
+    path: Assets/scene/gameover.unity
+    guid: 4b36f7b1aa45e44edab938b80de052bb

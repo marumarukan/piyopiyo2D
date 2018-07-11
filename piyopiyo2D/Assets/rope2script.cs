@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class rope2script : MonoBehaviour {
-	public GameObject ropeprefab;
+	public GameObject ropeposition;
 	// Use this for initialization
 	void Start () {
 		
@@ -11,17 +11,12 @@ public class rope2script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
-	void OnTriggerEnter2D (Collider2D collider){
-
-		Debug.Log ("a");
-		if (collider.gameObject.tag == "wall") {
-//			foreach (ContactPoint2D point in collider.contacts) {
-//				
-//				ropeprefab.transform.position = (Vector3)point.point;
-//
-//			}
+		if (Input.GetMouseButtonDown (0)) {
+			Instantiate (ropeposition, new Vector2(this.gameObject.transform.position.x,this.gameObject.transform.position.y), Quaternion.identity);
+		}
+		if (Input.GetMouseButtonUp (0)) {
+			ropeposition.GetComponent<Ropeposition> ().Destroy ();
 		}
 	}
+
 }

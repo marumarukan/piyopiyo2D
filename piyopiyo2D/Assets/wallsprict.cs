@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class wallsprict : MonoBehaviour {
-
-
+	
 	public GameObject wallPrefab;
 
 
@@ -19,7 +18,7 @@ public class wallsprict : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 		/*if (!GetComponent<Renderer>().isVisible) {
 			Destroy(this.gameObject);
 		}*/
@@ -42,18 +41,18 @@ public class wallsprict : MonoBehaviour {
 //		obj.transform.localPosition = new Vector2 (0, y);
 //
 //	}
-	void OnTriggerEnter2D(Collider2D collison2D){
+	public void OnTriggerEnter2D(Collider2D collison2D){
 		
 		if (collison2D.gameObject.tag == "Player") {
-			float y = Random.Range (1f, -1f);
+			float y = Random.Range (1.8f, -1.8f);
 			
-			Instantiate (wallPrefab, new Vector3 (this.gameObject.transform.position.x + 10.4f, y, 0), Quaternion.identity);
-			Destroy (this.gameObject);
-		Invoke ("destoroy", 3.0f);
-		}
-	}
-void destoroy(){
-		Destroy (wallPrefab);
-}
+			Instantiate (wallPrefab, new Vector3 (this.gameObject.transform.position.x + 13.84f, y, 0), Quaternion.identity);
+			Invoke ("destroy", 10);
 
+		}
+
+	}
+void destroy(){
+	Destroy(wallPrefab);
+}
 }
